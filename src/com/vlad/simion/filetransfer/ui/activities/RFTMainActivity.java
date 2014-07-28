@@ -12,7 +12,7 @@ public class RFTMainActivity extends RFTBaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_rftmain);
 		
-		System.out.println("Test commit");
+		System.out.println("Test commit 2");
 	}
 
 
