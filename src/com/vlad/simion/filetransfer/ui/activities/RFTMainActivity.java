@@ -19,6 +19,7 @@ public class RFTMainActivity extends RFTBaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_rftmain);
+
 		setUserInterface();
 		refreshViews();
 	}
@@ -42,7 +43,6 @@ public class RFTMainActivity extends RFTBaseActivity {
 
 
 	private List<Fragment> getFragments() {
-
 		List<Fragment> fList = new ArrayList<Fragment>();
 		fList.add(MyRFTFragment.newInstance(FragmentTitles.FRAGMENT_1_MY_CARD));
 		fList.add(MyRFTFragment.newInstance(FragmentTitles.FRAGMENT_2_MY_PHOTOS));
@@ -51,7 +51,6 @@ public class RFTMainActivity extends RFTBaseActivity {
 		fList.add(MyRFTFragment.newInstance(FragmentTitles.FRAGMENT_5_MY_CONTACTS));
 
 		return fList;
-
 	}
 
 }

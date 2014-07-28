@@ -1,13 +1,13 @@
 package com.vlad.simion.filetransfer.ui.fragments;
 
-import com.vlad.simion.filetransfer.R;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.vlad.simion.filetransfer.R;
 
 public class MyRFTFragment extends Fragment {
 
