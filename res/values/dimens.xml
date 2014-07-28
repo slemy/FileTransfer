@@ -4,4 +4,35 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!-- Main Activity User Card Dimens -->
+
+    <dimen name="card_image_height">80dp</dimen>
+    <dimen name="card_image_width">80dp</dimen>
+    <dimen name="card_edit_height">20dp</dimen>
+    <dimen name="card_edit_width">20dp</dimen>
+    <dimen name="card_top_layout_height">100dp</dimen>
+    <dimen name="card_details_top_width">80dp</dimen>
+    
+    <dimen name="padding_m1dp">-1dp</dimen>
+    <dimen name="padding_m2dp">-2dp</dimen>
+    <dimen name="padding_m3dp">-3dp</dimen>
+    <dimen name="padding_m4dp">-4dp</dimen>
+    <dimen name="padding_m5dp">-5dp</dimen>
+    <dimen name="padding_1dp">1dp</dimen>
+    <dimen name="padding_2dp">2dp</dimen>
+    <dimen name="padding_3dp">3dp</dimen>
+    <dimen name="padding_4dp">4dp</dimen>
+    <dimen name="padding_5dp">5dp</dimen>
+    <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="padding_15dp">15dp</dimen>
+    <dimen name="padding_20dp">20dp</dimen>
+    
+    <dimen name="text_size_8sp">8sp</dimen>
+    <dimen name="text_size_10sp">10sp</dimen>
+    <dimen name="text_size_12sp">12sp</dimen>
+    <dimen name="text_size_15sp">15sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+   
+    <!-- End Of Main Activity User Card Dimens -->
+
 </resources>
