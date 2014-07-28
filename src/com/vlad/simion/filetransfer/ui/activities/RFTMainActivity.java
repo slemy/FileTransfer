@@ -11,6 +11,8 @@ public class RFTMainActivity extends RFTBaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_rftmain);
+		
+		System.out.println("Test commit");
 	}
 
 
