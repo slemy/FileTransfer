@@ -10,5 +10,6 @@
     <string name="card_firstname">First Name</string>
     <string name="card_lastname">Last Name</string>
     <string name="card_workplace">Work Place</string>
+    <string name="card_demo_value">ThisIsDemo Value</string>
 
 </resources>

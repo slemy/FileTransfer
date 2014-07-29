@@ -19,10 +19,19 @@
     
     <style name = "style_card_profile_top_details">
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/text_size_12sp</item>
+        <item name="android:textSize">@dimen/text_size_15sp</item>
         <item name="android:scrollHorizontally">true</item>
         <item name="android:marqueeRepeatLimit">marquee_forever</item>
         <item name="android:maxLines">1</item>
     </style>
 
+    <style name = "style_card_profile_bottom_details">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:textColor">@color/DarkGray</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    
 </resources>

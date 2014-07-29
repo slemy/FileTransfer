@@ -1,11 +1,15 @@
 package com.vlad.simion.filetransfer.ui.adapters;
 
 import java.util.List;
+
+import com.viewpagerindicator.IconPagerAdapter;
+import com.vlad.simion.filetransfer.ui.fragments.FragmentTitles;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-public class MyRFTPageAdapter extends FragmentPagerAdapter {
+public class MyRFTPageAdapter extends FragmentPagerAdapter  implements IconPagerAdapter{
 
 	private List<Fragment> m_Fragments;
 
@@ -22,6 +26,11 @@ public class MyRFTPageAdapter extends FragmentPagerAdapter {
 	@Override
 	public int getCount() {
 		return this.m_Fragments.size();
+	}
+
+	@Override
+	public int getIconResId(int index) {
+		return FragmentTitles.FRAGMENT_ICONS[index];
 	}
 
 }

@@ -3,7 +3,6 @@ package com.vlad.simion.filetransfer.ui.activities.baseactivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.Window;
 
 /**
  * 
@@ -19,7 +18,6 @@ public abstract class RFTBaseActivity extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.m_Context = this;
-		this.requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
 	}
 	
 	@Override
