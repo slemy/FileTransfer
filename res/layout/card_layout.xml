@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/padding_10dp" 
+    android:paddingRight="@dimen/padding_10dp">
+
+    <RelativeLayout
+        android:id="@+id/layout_card_top_details"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_top_layout_height"
+        android:background="@color/DarkGray2" >
+
+        <ImageView
+            android:id="@+id/imv_card_profile_image"
+            android:layout_width="@dimen/card_image_width"
+            android:layout_height="@dimen/card_image_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/padding_10dp"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:src="@drawable/icon_user_no_profile_picture" />
+
+        <ImageView
+            android:id="@+id/imv_card_edit"
+            android:layout_width="@dimen/card_edit_width"
+            android:layout_height="@dimen/card_edit_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/icod_card_edit" />
+
+        <LinearLayout
+            android:layout_width="@dimen/card_details_top_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/padding_15dp"
+            android:layout_marginTop="@dimen/padding_20dp"
+            android:layout_toLeftOf="@+id/imv_card_edit"
+            android:layout_toRightOf="@+id/imv_card_profile_image"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_card_profile_first_name"
+                style="@style/style_card_profile_top_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_firstname" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/card_item_divider" />
+
+            <TextView
+                android:id="@+id/tv_card_profile_last_name"
+                style="@style/style_card_profile_top_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_lastname" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/card_item_divider" />
+
+            <TextView
+                android:id="@+id/tv_card_profile_workplace"
+                style="@style/style_card_profile_top_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_workplace" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/layout_card_top_details"
+        android:background="@color/White" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_10dp"
+            android:layout_marginLeft="@dimen/padding_15dp"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_demo_1"
+                style="@style/style_card_profile_bottom_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_demo_value" />
+
+            <TextView
+                android:id="@+id/tv_demo_2"
+                style="@style/style_card_profile_bottom_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_demo_value" />
+
+            <TextView
+                android:id="@+id/tv_demo_3"
+                style="@style/style_card_profile_bottom_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_demo_value" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
