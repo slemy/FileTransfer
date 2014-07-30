@@ -431,8 +431,8 @@ containing a value of this type.
     public static final class id {
         public static final int action_settings=0x7f040012;
         public static final int bottom=0x7f040003;
+        public static final int card_widget=0x7f040010;
         public static final int fragment_default_title=0x7f040011;
-        public static final int header_container=0x7f040010;
         public static final int imv_card_edit=0x7f040009;
         public static final int imv_card_profile_image=0x7f040008;
         public static final int layout_card_top_details=0x7f040007;

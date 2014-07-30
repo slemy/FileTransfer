@@ -125,8 +125,8 @@ int drawable vpi__tab_unselected_holo 0x7f020014
 int drawable vpi__tab_unselected_pressed_holo 0x7f020015
 int id action_settings 0x7f040012
 int id bottom 0x7f040003
+int id card_widget 0x7f040010
 int id fragment_default_title 0x7f040011
-int id header_container 0x7f040010
 int id imv_card_edit 0x7f040009
 int id imv_card_profile_image 0x7f040008
 int id layout_card_top_details 0x7f040007

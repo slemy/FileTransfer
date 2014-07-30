@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <include
-        android:id="@+id/header_container"
+    <com.vlad.simion.filetransfer.ui.widgets.CardWidget 
+        android:id="@+id/card_widget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_20dp"
-        layout="@layout/card_layout" />
+        android:layout_marginTop="@dimen/text_size_15sp"
+        ></com.vlad.simion.filetransfer.ui.widgets.CardWidget>
 
 </RelativeLayout>
