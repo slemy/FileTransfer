@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingLeft="@dimen/padding_10dp" 
-    android:paddingRight="@dimen/padding_10dp">
+    android:paddingLeft="@dimen/padding_10dp"
+    android:paddingRight="@dimen/padding_10dp" >
 
     <RelativeLayout
         android:id="@+id/layout_card_top_details"
@@ -47,6 +47,7 @@
                 android:text="@string/card_firstname" />
 
             <View
+                android:id="@+id/view_card_profile_divider_one"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="@drawable/card_item_divider" />
@@ -59,6 +60,7 @@
                 android:text="@string/card_lastname" />
 
             <View
+                android:id="@+id/view_card_profile_divider_two"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="@drawable/card_item_divider" />

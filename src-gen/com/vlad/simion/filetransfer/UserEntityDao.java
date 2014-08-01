@@ -28,6 +28,7 @@ public class UserEntityDao extends AbstractDao<UserEntity, Long> {
         public final static Property LastName = new Property(2, String.class, "LastName", false, "LAST_NAME");
         public final static Property Email = new Property(3, String.class, "Email", false, "EMAIL");
         public final static Property Workplace = new Property(4, String.class, "Workplace", false, "WORKPLACE");
+        public final static Property ProfileImage = new Property(5, byte[].class, "ProfileImage", false, "PROFILE_IMAGE");
     };
 
 
@@ -47,7 +48,8 @@ public class UserEntityDao extends AbstractDao<UserEntity, Long> {
                 "'FIRST_NAME' TEXT," + // 1: FirstName
                 "'LAST_NAME' TEXT," + // 2: LastName
                 "'EMAIL' TEXT," + // 3: Email
-                "'WORKPLACE' TEXT);"); // 4: Workplace
+                "'WORKPLACE' TEXT," + // 4: Workplace
+                "'PROFILE_IMAGE' BLOB);"); // 5: ProfileImage
     }
 
     /** Drops the underlying database table. */
@@ -85,6 +87,11 @@ public class UserEntityDao extends AbstractDao<UserEntity, Long> {
         if (Workplace != null) {
             stmt.bindString(5, Workplace);
         }
+ 
+        byte[] ProfileImage = entity.getProfileImage();
+        if (ProfileImage != null) {
+            stmt.bindBlob(6, ProfileImage);
+        }
     }
 
     /** @inheritdoc */
@@ -101,7 +108,8 @@ public class UserEntityDao extends AbstractDao<UserEntity, Long> {
             cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // FirstName
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // LastName
             cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // Email
-            cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4) // Workplace
+            cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // Workplace
+            cursor.isNull(offset + 5) ? null : cursor.getBlob(offset + 5) // ProfileImage
         );
         return entity;
     }
@@ -114,6 +122,7 @@ public class UserEntityDao extends AbstractDao<UserEntity, Long> {
         entity.setLastName(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
         entity.setEmail(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
         entity.setWorkplace(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
+        entity.setProfileImage(cursor.isNull(offset + 5) ? null : cursor.getBlob(offset + 5));
      }
     
     /** @inheritdoc */

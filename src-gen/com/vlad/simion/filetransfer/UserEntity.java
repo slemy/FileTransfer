@@ -11,6 +11,7 @@ public class UserEntity {
     private String LastName;
     private String Email;
     private String Workplace;
+    private byte[] ProfileImage;
 
     public UserEntity() {
     }
@@ -19,12 +20,13 @@ public class UserEntity {
         this.id = id;
     }
 
-    public UserEntity(Long id, String FirstName, String LastName, String Email, String Workplace) {
+    public UserEntity(Long id, String FirstName, String LastName, String Email, String Workplace, byte[] ProfileImage) {
         this.id = id;
         this.FirstName = FirstName;
         this.LastName = LastName;
         this.Email = Email;
         this.Workplace = Workplace;
+        this.ProfileImage = ProfileImage;
     }
 
     public Long getId() {
@@ -65,6 +67,14 @@ public class UserEntity {
 
     public void setWorkplace(String Workplace) {
         this.Workplace = Workplace;
+    }
+
+    public byte[] getProfileImage() {
+        return ProfileImage;
+    }
+
+    public void setProfileImage(byte[] ProfileImage) {
+        this.ProfileImage = ProfileImage;
     }
 
 }

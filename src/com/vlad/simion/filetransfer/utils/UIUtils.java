@@ -6,7 +6,7 @@ import android.widget.TextView;
 public class UIUtils {
 
 	public static void setSafeText(TextView textView, String text) {
-		if (textView != null) {
+		if (textView != null ) {
 			if (!StringUtils.equals(textView.getText().toString(), text)) {
 				textView.setText(text);
 			}

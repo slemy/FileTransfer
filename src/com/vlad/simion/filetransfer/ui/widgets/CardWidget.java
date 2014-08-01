@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.vlad.simion.filetransfer.R;
+import com.vlad.simion.filetransfer.utils.StringUtils;
 import com.vlad.simion.filetransfer.utils.UIUtils;
 
 public class CardWidget extends RelativeLayout {
@@ -20,6 +21,9 @@ public class CardWidget extends RelativeLayout {
 	private TextView tv_WorkPlace;
 	private ImageView imv_ProfilePicture;
 	private ImageView imv_EditProfile;
+	
+	private View view_Divider1;
+	private View view_Divider2;
 
 	public CardWidget(Context context) {
 		super(context);
@@ -49,6 +53,9 @@ public class CardWidget extends RelativeLayout {
 		
 		imv_ProfilePicture = (ImageView) m_CardWidgetLayout.findViewById(R.id.imv_card_profile_image);
 		imv_EditProfile = (ImageView) m_CardWidgetLayout.findViewById(R.id.imv_card_edit);
+		
+		view_Divider1 = (View) m_CardWidgetLayout.findViewById(R.id.view_card_profile_divider_one);
+		view_Divider2 = (View) m_CardWidgetLayout.findViewById(R.id.view_card_profile_divider_two);
 	}
 	
 	public void setFirstName(String _firstName){
@@ -57,10 +64,20 @@ public class CardWidget extends RelativeLayout {
 	
 	public void setLastName(String _lastName){
 		UIUtils.setSafeText(tv_LastName, _lastName);
+		if(StringUtils.isEmptyOrBlank(_lastName)){
+			UIUtils.setSafeVisibility(view_Divider1, false);
+			return;
+		}
+		UIUtils.setSafeVisibility(view_Divider1, true);
 	}
 	
 	public void setWorkPlace(String _workPlace){
 		UIUtils.setSafeText(tv_WorkPlace, _workPlace);
+		if(StringUtils.isEmptyOrBlank(_workPlace)){
+			UIUtils.setSafeVisibility(view_Divider2, false);
+			return;
+		}
+		UIUtils.setSafeVisibility(view_Divider2, true);
 	}
 	
 	public void setProfileImage(Bitmap _profileImage){

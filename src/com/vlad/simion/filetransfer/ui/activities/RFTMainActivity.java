@@ -16,12 +16,12 @@ import com.vlad.simion.filetransfer.ui.fragments.FragmentTitles;
 import com.vlad.simion.filetransfer.ui.fragments.MyRFTFragment;
 
 public class RFTMainActivity extends RFTBaseActivity {
+	List<Fragment> m_FragmentList;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_rftmain);
-
 		setUserInterface();
 		refreshViews();
 	}
@@ -38,6 +38,7 @@ public class RFTMainActivity extends RFTBaseActivity {
 
 	@Override
 	public void refreshViews() {
+		ViewHolder.m_ViewPager.setAdapter(ViewHolder.m_PageAdapter);
 	}
 
 	private static class ViewHolder {
@@ -47,16 +48,16 @@ public class RFTMainActivity extends RFTBaseActivity {
 	}
 
 	private List<Fragment> getFragments() {
-		List<Fragment> fList = new ArrayList<Fragment>();
-		fList.add(FragmentCard.newInstance(FragmentTitles.FRAGMENT_1_MY_CARD));
-		fList.add(MyRFTFragment
+		m_FragmentList = new ArrayList<Fragment>();
+		m_FragmentList.add(FragmentCard.newInstance(FragmentTitles.FRAGMENT_1_MY_CARD));
+		m_FragmentList.add(MyRFTFragment
 				.newInstance(FragmentTitles.FRAGMENT_2_MY_PHOTOS));
-		fList.add(MyRFTFragment.newInstance(FragmentTitles.FRAGMENT_3_MY_APPS));
-		fList.add(MyRFTFragment.newInstance(FragmentTitles.FRAGMENT_4_MY_FILES));
-		fList.add(MyRFTFragment
+		m_FragmentList.add(MyRFTFragment.newInstance(FragmentTitles.FRAGMENT_3_MY_APPS));
+		m_FragmentList.add(MyRFTFragment.newInstance(FragmentTitles.FRAGMENT_4_MY_FILES));
+		m_FragmentList.add(MyRFTFragment
 				.newInstance(FragmentTitles.FRAGMENT_5_MY_CONTACTS));
 
-		return fList;
+		return m_FragmentList;
 	}
 
 }
