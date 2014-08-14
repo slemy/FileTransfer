@@ -37,7 +37,11 @@ public class FileUtils {
 	}
 
 	public static Bitmap getBitmapFromByteArray(byte[] _byteArray) {
-		Bitmap _bmp = BitmapFactory.decodeByteArray(_byteArray, 0, _byteArray.length);
-		return _bmp;
+		if (_byteArray != null) {
+			Bitmap _bmp = BitmapFactory.decodeByteArray(_byteArray, 0,
+					_byteArray.length);
+			return _bmp;
+		}
+		return null;
 	}
 }

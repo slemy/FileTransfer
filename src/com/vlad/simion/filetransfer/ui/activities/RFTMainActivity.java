@@ -23,7 +23,13 @@ public class RFTMainActivity extends RFTBaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_rftmain);
 		setUserInterface();
-		refreshViews();
+		refreshViews();	
+		registerGCM();
+	}
+
+	private void registerGCM() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
